@@ -16,7 +16,7 @@
               "logic_complexity": 0.0,
               "comment_lines": 0.0,
               "number_of_functions": 0.0,
-              "message_chains": 1.0,
+              "message_chains": 0.0,
               "rloc": 7.0,
               "loc": 8.0,
               "long_method": 0.0,
@@ -303,5 +303,5 @@
     },
     "blacklist": []
   },
-  "checksum": "f79c6623e404e19c6e4f1427360fb227"
+  "checksum": "4ffd4435d86a3f67bdcb6ca351fe0b9a"
 }

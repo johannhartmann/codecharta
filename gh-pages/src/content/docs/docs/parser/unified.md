@@ -454,7 +454,7 @@ can indicate tight coupling and violations of the Law of Demeter. The metric cou
 ##### Scala (.scala, .sbt)
 
 - **Chain nodes**: `call_expression`, `field_expression`
-- **Call nodes**: `call_expression`, `field_expression` (includes paren-less Scala chains)
+- **Call nodes**: `call_expression`
 
 ##### Bash (.sh)
 

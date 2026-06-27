@@ -141,14 +141,19 @@ class ScalaCollectorTest {
     @Test
     fun `should count chained Scala calls as message chains`() {
         val content = """
-            val rendered = values
-              .map(_.trim)
-              .filter(_.nonEmpty)
-              .sorted
-              .mkString(",")
+            val rendered = user.a().profile.b().c().d()
         """.trimIndent()
 
         assertMetric(content, AvailableFileMetrics.MESSAGE_CHAINS.metricName, 1.0)
+    }
+
+    @Test
+    fun `should not count property-only Scala chains as message chains`() {
+        val content = """
+            val name = user.profile.address.street.name
+        """.trimIndent()
+
+        assertMetric(content, AvailableFileMetrics.MESSAGE_CHAINS.metricName, 0.0)
     }
 
     @Test
