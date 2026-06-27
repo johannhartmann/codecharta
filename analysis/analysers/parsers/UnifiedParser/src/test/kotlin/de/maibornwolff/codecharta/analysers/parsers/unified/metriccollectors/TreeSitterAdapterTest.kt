@@ -70,6 +70,7 @@ class TreeSitterAdapterTest {
             FileExtension.GO to Language.GO,
             FileExtension.PHP to Language.PHP,
             FileExtension.RUBY to Language.RUBY,
+            FileExtension.SCALA to Language.SCALA,
             FileExtension.SWIFT to Language.SWIFT,
             FileExtension.BASH to Language.BASH,
             FileExtension.CSHARP to Language.CSHARP,
@@ -107,6 +108,8 @@ class TreeSitterAdapterTest {
         val javaFile = File("Test.java")
         val kotlinFile = File("Test.kt")
         val pythonFile = File("test.py")
+        val scalaFile = File("Test.scala")
+        val sbtFile = File("build.sbt")
         val delphiUnitFile = File("Unit.pas")
         val delphiProjectFile = File("Project.dpr")
 
@@ -114,6 +117,8 @@ class TreeSitterAdapterTest {
         assertThat(TreeSitterAdapter.getLanguageForFile(javaFile)).isEqualTo(Language.JAVA)
         assertThat(TreeSitterAdapter.getLanguageForFile(kotlinFile)).isEqualTo(Language.KOTLIN)
         assertThat(TreeSitterAdapter.getLanguageForFile(pythonFile)).isEqualTo(Language.PYTHON)
+        assertThat(TreeSitterAdapter.getLanguageForFile(scalaFile)).isEqualTo(Language.SCALA)
+        assertThat(TreeSitterAdapter.getLanguageForFile(sbtFile)).isEqualTo(Language.SCALA)
         assertThat(TreeSitterAdapter.getLanguageForFile(delphiUnitFile)).isEqualTo(Language.DELPHI)
         assertThat(TreeSitterAdapter.getLanguageForFile(delphiProjectFile)).isEqualTo(Language.DELPHI)
     }
@@ -155,6 +160,7 @@ class TreeSitterAdapterTest {
             FileExtension.GO,
             FileExtension.PHP,
             FileExtension.RUBY,
+            FileExtension.SCALA,
             FileExtension.SWIFT,
             FileExtension.BASH,
             FileExtension.CSHARP,

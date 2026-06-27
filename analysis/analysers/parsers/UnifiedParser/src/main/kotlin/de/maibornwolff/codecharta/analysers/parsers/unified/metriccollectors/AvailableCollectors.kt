@@ -23,6 +23,7 @@ enum class AvailableCollectors(
     GO(FileExtension.GO, { TreeSitterLibraryCollector(Language.GO) }),
     PHP(FileExtension.PHP, { TreeSitterLibraryCollector(Language.PHP) }),
     RUBY(FileExtension.RUBY, { TreeSitterLibraryCollector(Language.RUBY) }),
+    SCALA(FileExtension.SCALA, { TreeSitterLibraryCollector(Language.SCALA) }),
     SWIFT(FileExtension.SWIFT, { TreeSitterLibraryCollector(Language.SWIFT) }),
     BASH(FileExtension.BASH, { TreeSitterLibraryCollector(Language.BASH) }),
     VUE(FileExtension.VUE, { TreeSitterLibraryCollector(Language.VUE) }),

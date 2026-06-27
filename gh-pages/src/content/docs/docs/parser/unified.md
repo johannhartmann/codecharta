@@ -24,6 +24,7 @@ CodeCharta. It generates a cc.json file (compressed by default, or uncompressed 
 | Go           | .go                                    |
 | PHP          | .php                                   |
 | Ruby         | .rb                                    |
+| Scala        | .scala, .sbt                           |
 | Swift        | .swift                                 |
 | Bash         | .sh                                    |
 | Vue          | .vue                                   |
@@ -218,6 +219,13 @@ contribute to complexity:
 - **Functions**: `lambda`, `method`, `singleton_method`
 - **Logical operators**: `&&`, `||`, `and`, `or` in binary expressions
 
+##### Scala (.scala, .sbt)
+
+- **Control flow**: `if_expression`, `for_expression`, `while_expression`, `do_while_expression`, `match_expression`, `case_clause`,
+  `guard`, `try_expression`, `catch_clause`
+- **Functions**: `function_definition`, `function_declaration`, `lambda_expression`
+- **Logical operators**: `&&`, `||` in `infix_expression`
+
 ##### Bash (.sh)
 
 - **Control flow**: `if_statement`, `elif_clause`, `for_statement`, `while_statement`, `c_style_for_statement`, `ternary_expression`,
@@ -253,6 +261,7 @@ Comment lines are counted based on language-specific comment syntax:
 - **Go**: `comment`
 - **PHP**: `comment`
 - **Ruby**: `comment`
+- **Scala**: `comment`, `block_comment`
 - **Swift**: `comment`, `multiline_comment`
 - **Bash**: `comment`
 - **Delphi**: `comment` (covers `//` line, `{ }` brace, and `(* *)` star comments)
@@ -325,6 +334,10 @@ Function counting identifies different types of function definitions per languag
 - **Methods**: `method`, `singleton_method`
 - **Lambda expressions**: Assigned to variables (detected via assignment with lambda value)
 
+##### Scala (.scala, .sbt)
+
+- **Functions**: `function_definition`, `function_declaration`
+
 ##### Bash (.sh)
 
 - **Functions**: `function_definition`
@@ -368,6 +381,7 @@ Parameters per function counts the number of parameters declared for each functi
 - **Go**: `parameter_declaration`
 - **PHP**: `simple_parameter`, `variadic_parameter`, `property_promotion_parameter`
 - **Ruby**: `identifier` parameters
+- **Scala**: `parameter`
 - **Swift**: `parameter`
 - **Bash**: Parameters are counted from function definitions
 - **Delphi**: `declArg`
@@ -437,6 +451,11 @@ can indicate tight coupling and violations of the Law of Demeter. The metric cou
 - **Chain nodes**: `call`
 - **Call nodes**: `call`
 
+##### Scala (.scala, .sbt)
+
+- **Chain nodes**: `call_expression`, `field_expression`
+- **Call nodes**: `call_expression`, `field_expression` (includes paren-less Scala chains)
+
 ##### Bash (.sh)
 
 Message chains are not applicable to Bash as it does not support method chaining.
@@ -471,4 +490,3 @@ Binary metric (0 or 1) that indicates whether a file has more than 10 comment li
 ##### Comment Ratio
 
 Calculates the ratio of comment lines to real lines of code (comment_lines / rloc). The result is rounded to two decimal places. If RLOC is 0, the ratio is 0.0.
-

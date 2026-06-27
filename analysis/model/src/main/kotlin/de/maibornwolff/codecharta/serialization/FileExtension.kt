@@ -28,6 +28,7 @@ enum class FileExtension(
     OBJECTIVE_C(".m"),
     PYTHON(".py"),
     RUBY(".rb"),
+    SCALA(".scala", setOf(".sbt")),
     SWIFT(".swift"),
     BASH(".sh"),
     VUE(".vue"),

@@ -57,6 +57,7 @@ object TreeSitterAdapter {
         FileExtension.GO -> Language.GO
         FileExtension.PHP -> Language.PHP
         FileExtension.RUBY -> Language.RUBY
+        FileExtension.SCALA -> Language.SCALA
         FileExtension.SWIFT -> Language.SWIFT
         FileExtension.BASH -> Language.BASH
         FileExtension.CSHARP -> Language.CSHARP

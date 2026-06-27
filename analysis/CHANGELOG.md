@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/)
 ### Added 🚀
 
 - Add JSX support to UnifiedParser
+- Add Scala support to UnifiedParser (.scala, .sbt)
 - Add TSX support to UnifiedParser
 
 ## [1.143.0] - 2026-04-28

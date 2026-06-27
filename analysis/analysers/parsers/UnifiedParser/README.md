@@ -21,6 +21,7 @@ The Unified Parser is parser to generate code metrics from a source code file or
 | Go           | .go                                    |
 | PHP          | .php                                   |
 | Ruby         | .rb                                    |
+| Scala        | .scala, .sbt                           |
 | Swift        | .swift                                 |
 | Bash         | .sh                                    |
 | Vue          | .vue                                   |
